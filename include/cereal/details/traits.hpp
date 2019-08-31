@@ -31,8 +31,12 @@
 #define CEREAL_DETAILS_TRAITS_HPP_
 
 #ifndef __clang__
+#ifdef __GNUC__
+#ifdef __GNUC_MINOR__
 #if (__GNUC__ == 4 && __GNUC_MINOR__ <= 7)
 #define CEREAL_OLDER_GCC
+#endif
+#endif
 #endif // gcc 4.7 or earlier
 #endif // __clang__
 
